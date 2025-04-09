@@ -85,3 +85,16 @@ function converterDolarParaReal(valorEmDolar) {
 //   let valorEmDolar = 50;
 //   let valorEmReais = converterDolarParaReal(valorEmDolar);
 //   console.log(`${valorEmDolar} dólares equivalem a R$ ${valorEmReais}`);
+
+let frutas = ["Maça", "Banana", "kiwi"]
+console.log(frutas[2])
+
+let listaGenerica = ['Martina', 'Giovana', 'Guilherme']
+let linguagensDeProgramacao = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+linguagensDeProgramacao.push('Java', 'Ruby', 'GoLang')
+// linguagensDeProgramacao.push('Ruby')
+// linguagensDeProgramacao.push('GoLang')
+console.log(linguagensDeProgramacao)
+console.log(listaGenerica[0])
+console.log(listaGenerica[1])
+console.log(listaGenerica[2])

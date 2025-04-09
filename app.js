@@ -4,8 +4,11 @@
 //let paragrafo = document.querySelector('p');
 //paragrafo.innerHTML = 'Escolha um número de 1 a 100';
 
+let listadeNS = [];
+let numeroLimite = 10
 let nS = gerarNumeroAleatorio();
-let tentativas = 1
+let tentativas = 1;
+
 
 function exibirTextoTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -39,7 +42,19 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadesDeElementosNaLista = listadeNS.length;
+
+    if (quantidadesDeElementosNaLista == numeroLimite){
+        listadeNS = [];
+    }
+    if (listadeNS.includes(numeroEscolhido)){
+        return gerarNumeroAleatorio();
+    } else {
+        listadeNS.push(numeroEscolhido)
+        console.log(listadeNS)
+        return numeroEscolhido
+    }
 }
 
 function limparCampo() {
@@ -55,3 +70,12 @@ function reiniciarJogo() {
     document.getElementById('reiniciar').setAttribute('disabled', true)
 }
 
+//Listas
+// let numeros = [1, 5, 9]
+// console.log(numeros.length)
+// console.log(numeros[2])
+// let linguagens = ['java', 'python', 'javascript', 'css', 'html']
+// console.log(linguagens[1])
+// console.log(linguagens.length)
+// let ultimo = linguagens[linguagens.length - 1]
+// console.log(ultimo)
